@@ -4,19 +4,20 @@
 #include <stdio.h>
 
 //Project libraries
-#include "Encoder.hpp"
 #include "Motor.hpp"
 
 //Global variables
+Motor* motor0;
 
 //Global objects
 
 //Main function
 int main(){
     stdio_init_all();
+    motor0 = new Motor();
     while(true){
-        //int32_t value = encoder0->get_count();
-        //printf("Value: %ld\n", value);
+        int32_t value = (int32_t)motor0->readSpeed();
+        printf("Value: %ld\n", value);
         sleep_ms(100);
     }
 }

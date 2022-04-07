@@ -9,7 +9,8 @@
 class Motor{
 public:
     Motor();
-    void ControlSpeed(float speed);
+    void controlSpeed(float speed);
+    float readSpeed();
 private:
     BTS7960* bts0;
     Encoder* encoder0;

@@ -9,6 +9,11 @@ Motor::Motor(){
     encoder0->program_init();
 }
 
-void Motor::ControlSpeed(float speed){
+void Motor::controlSpeed(float speed){
 
+}
+
+float Motor::readSpeed(){
+    int32_t value = encoder0->get_count();
+    return (float)value;
 }
