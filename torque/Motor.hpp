@@ -12,8 +12,12 @@ public:
     void controlSpeed(float speed);
     float readSpeed();
 private:
+    static bool updateSpeed(struct repeating_timer *t);
     BTS7960* bts0;
     Encoder* encoder0;
+    struct repeating_timer timer0;
+    int32_t oldvalue;
+    int32_t value;
 };
 
 #endif
