@@ -29,10 +29,10 @@ int main(){
         float omega = motor0->readSpeed();
         printf("Value: %f\n", omega);
         sendPacket.omega = omega;
-        sendPacket.current = 0;
+        sendPacket.current = 1.0;
         pb_ostream_t stream = pb_ostream_from_buffer(sendBuffer, 64);
         pb_encode (&stream, OmegaOutput_fields, &sendPacket);
-        uart_write_blocking(uart0, sendBuffer, 64);
+        uart_write_blocking(uart0, sendBuffer, stream.bytes_written);
         sleep_ms(100);
     }
 }
