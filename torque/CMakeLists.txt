@@ -14,7 +14,12 @@ add_executable(${PROJECT_NAME}
         Encoder.cpp
         Motor.cpp
         bts7960.cpp
+        output.pb.c
+        pb_common.c
+        pb_decode.c
+        pb_encode.c
 )
+pico_enable_stdio_uart(${PROJECT_NAME} 0)
 pico_enable_stdio_usb(${PROJECT_NAME} 1)
 pico_generate_pio_header(${PROJECT_NAME} ${CMAKE_CURRENT_LIST_DIR}/Encoder.pio)
 # create map/bin/hex/uf2 files.
@@ -24,4 +29,10 @@ target_link_libraries(${PROJECT_NAME}
             pico_stdlib
             hardware_pio
             hardware_pwm
+            hardware_uart
 )
+
+add_custom_command(TARGET ${PROJECT_NAME}
+        POST_BUILD
+        COMMAND cp ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.uf2 /media/gabriel/RPI-RP2/
+        )

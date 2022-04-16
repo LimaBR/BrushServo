@@ -8,15 +8,19 @@ Motor::Motor(){
     uint32_t offset = pio_add_program(pio0, &quadrature_encoder_program);
     encoder0 = new Encoder(pio0, 0, offset, 16, 0);
     encoder0->program_init();
-    add_repeating_timer_us(-10000, Motor::updateSpeed, this, &timer0);
+    add_repeating_timer_us(-100000, Motor::updateSpeed, this, &timer0);
 }
 
 void Motor::controlSpeed(float speed){
-    bts0->setSpeed((int32_t)(speed*255));
+    if(speed>1){
+        bts0->setSpeed(255);
+    }else{
+        bts0->setSpeed((int32_t)(speed*255));
+    }
 }
 
 float Motor::readSpeed(){
-    float speed = (value - oldvalue)*0.22439947525641380274733167023425;
+    float speed = (value - oldvalue)*10*2*3.1415926535/2800;
     return speed;
 }
 

@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message OmegaOutput {
+	float omega = 1;	//Velocidade do motor em rad/s
+	float current = 2;	//Corrente em Amperes
+}
