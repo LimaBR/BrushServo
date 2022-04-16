@@ -32,3 +32,5 @@
 *.app
 
 torque/build/
+*.lvlps
+*.aliases
