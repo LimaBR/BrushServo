@@ -10,11 +10,14 @@
 
 #include "main.h"
 #include <cstdio>
+#include "StaticFIFO.hpp"
 
 class SerialDebug
 {
 public:
 	SerialDebug(UART_HandleTypeDef* huartptr);
+	~SerialDebug();
+	void sendNext();
 	void setLevel(uint32_t level);
 	void debug(const char* data);
 	void info(const char* data);
@@ -28,6 +31,7 @@ public:
 		DEBUG_LEVEL_ERROR
 	};
 private:
+	StaticFIFO* fifo;
 	UART_HandleTypeDef* huartptr;
 	uint8_t uartBuf[64];
 	uint32_t debugLevel = DEBUG_LEVEL_ERROR;

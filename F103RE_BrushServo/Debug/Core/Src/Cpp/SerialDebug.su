@@ -1,6 +1,8 @@
-../Core/Src/Cpp/SerialDebug.cpp:11:1:SerialDebug::SerialDebug(UART_HandleTypeDef*)	16	static
-../Core/Src/Cpp/SerialDebug.cpp:17:6:void SerialDebug::setLevel(uint32_t)	16	static
-../Core/Src/Cpp/SerialDebug.cpp:22:6:void SerialDebug::debug(const char*)	32	static
-../Core/Src/Cpp/SerialDebug.cpp:33:6:void SerialDebug::info(const char*)	32	static
-../Core/Src/Cpp/SerialDebug.cpp:44:6:void SerialDebug::warn(const char*)	32	static
-../Core/Src/Cpp/SerialDebug.cpp:55:6:void SerialDebug::error(const char*)	32	static
+../Core/Src/Cpp/SerialDebug.cpp:10:1:SerialDebug::SerialDebug(UART_HandleTypeDef*)	24	static
+../Core/Src/Cpp/SerialDebug.cpp:16:1:SerialDebug::~SerialDebug()	16	static
+../Core/Src/Cpp/SerialDebug.cpp:20:6:void SerialDebug::sendNext()	16	static
+../Core/Src/Cpp/SerialDebug.cpp:24:6:void SerialDebug::setLevel(uint32_t)	16	static
+../Core/Src/Cpp/SerialDebug.cpp:29:6:void SerialDebug::debug(const char*)	32	static
+../Core/Src/Cpp/SerialDebug.cpp:40:6:void SerialDebug::info(const char*)	32	static
+../Core/Src/Cpp/SerialDebug.cpp:51:6:void SerialDebug::warn(const char*)	32	static
+../Core/Src/Cpp/SerialDebug.cpp:62:6:void SerialDebug::error(const char*)	32	static

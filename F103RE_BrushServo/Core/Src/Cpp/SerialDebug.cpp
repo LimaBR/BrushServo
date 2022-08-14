@@ -6,11 +6,18 @@
  */
 
 #include "SerialDebug.hpp"
-#include "StaticFIFO.hpp"
 
 SerialDebug::SerialDebug(UART_HandleTypeDef* huartptr)
 : huartptr(huartptr)
 {
+	fifo = new StaticFIFO(8);
+}
+
+SerialDebug::~SerialDebug(){
+	delete fifo;
+}
+
+void SerialDebug::sendNext(){
 
 }
 

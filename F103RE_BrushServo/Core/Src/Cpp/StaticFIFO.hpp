@@ -19,7 +19,7 @@ public:
 	int32_t push(char* stringPointer, uint32_t stringLength);
 	int32_t pop(uint8_t* pointer, uint8_t* length, uint32_t max_length);
 private:
-	static const uint32_t bufSize = 256;
+	static const uint32_t bufSize = 64;
 	uint32_t fifoSize;
 	class StringContainer{
 	public:
