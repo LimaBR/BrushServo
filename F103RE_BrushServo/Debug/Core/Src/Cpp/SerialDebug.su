@@ -1,0 +1,6 @@
+../Core/Src/Cpp/SerialDebug.cpp:11:1:SerialDebug::SerialDebug(UART_HandleTypeDef*)	16	static
+../Core/Src/Cpp/SerialDebug.cpp:17:6:void SerialDebug::setLevel(uint32_t)	16	static
+../Core/Src/Cpp/SerialDebug.cpp:22:6:void SerialDebug::debug(const char*)	32	static
+../Core/Src/Cpp/SerialDebug.cpp:33:6:void SerialDebug::info(const char*)	32	static
+../Core/Src/Cpp/SerialDebug.cpp:44:6:void SerialDebug::warn(const char*)	32	static
+../Core/Src/Cpp/SerialDebug.cpp:55:6:void SerialDebug::error(const char*)	32	static
