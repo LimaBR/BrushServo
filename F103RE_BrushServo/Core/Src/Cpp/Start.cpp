@@ -20,7 +20,9 @@ char adcprintbuf[64];
 uint32_t adcresult = 0;
 
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef* huart){
-	debug.sendNext();
+	if(huart == &huart1){
+		debug.sendNext();
+	}
 }
 
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc){
@@ -32,7 +34,7 @@ void Start(){
 	debug.setLevel(SerialDebug::DEBUG_LEVEL_DEBUG);
 	while(true){
 		HAL_ADC_Start_DMA(&hadc1, &adcresult, 1);
-		HAL_Delay(2);
+		//HAL_Delay(2);
 		debug.debug("512");
 		motor0.setSpeed(512);
 		HAL_Delay(500);

@@ -34,6 +34,7 @@ private:
 	StaticFIFO* fifo;
 	UART_HandleTypeDef* huartptr;
 	uint8_t uartBuf[64];
+	uint8_t* uartSendBuf;
 	uint32_t debugLevel = DEBUG_LEVEL_ERROR;
 };
 

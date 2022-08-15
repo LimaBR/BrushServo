@@ -4,4 +4,4 @@
 ../Core/Src/Cpp/StaticFIFO.cpp:20:9:int32_t StaticFIFO::push(const char*)	88	static
 ../Core/Src/Cpp/StaticFIFO.cpp:36:9:int32_t StaticFIFO::push(uint8_t*, uint32_t)	96	static
 ../Core/Src/Cpp/StaticFIFO.cpp:52:9:int32_t StaticFIFO::push(char*, uint32_t)	96	static
-../Core/Src/Cpp/StaticFIFO.cpp:68:9:int32_t StaticFIFO::pop(uint8_t*, uint8_t*, uint32_t)	24	static
+../Core/Src/Cpp/StaticFIFO.cpp:68:9:int32_t StaticFIFO::pop(uint8_t**, uint8_t*, uint32_t)	24	static

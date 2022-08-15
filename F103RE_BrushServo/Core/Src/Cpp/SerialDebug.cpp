@@ -18,7 +18,10 @@ SerialDebug::~SerialDebug(){
 }
 
 void SerialDebug::sendNext(){
-
+	uint8_t numChars;
+	if(fifo->pop(&uartSendBuf, &numChars, 64)){
+		HAL_UART_Transmit_DMA(huartptr, uartSendBuf, (uint16_t)numChars);
+	}
 }
 
 void SerialDebug::setLevel(uint32_t level)
@@ -32,7 +35,9 @@ void SerialDebug::debug(const char* data){
 		//while (huartptr->gState != HAL_UART_STATE_READY);	//Trava se estiver ocupado durante um interrupt que manda debug
 		numChars = sprintf((char*)uartBuf, "[%13lu] DBG: %.42s\r\n", HAL_GetTick(), data);
 		if(numChars > 0){
-			HAL_UART_Transmit_DMA(huartptr, uartBuf, (uint16_t)numChars);
+			//HAL_UART_Transmit_DMA(huartptr, uartBuf, (uint16_t)numChars);
+			fifo->push(uartBuf, numChars);
+			sendNext();
 		}
 	}
 }

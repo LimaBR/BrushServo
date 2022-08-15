@@ -65,14 +65,14 @@ int32_t StaticFIFO::push(char* stringPointer, uint32_t stringLength){
 	return (((fifoSize + lastIdx) - firstIdx) % fifoSize);
 }
 
-int32_t StaticFIFO::pop(uint8_t* pointer, uint8_t* length, uint32_t max_length){
+int32_t StaticFIFO::pop(uint8_t** pointer, uint8_t* length, uint32_t max_length){
     if (lastIdx == firstIdx){
     	return 0;	//underrun
     }else if(fifo[firstIdx].length > max_length){
     	return -1;	//length limit
     }
-    pointer = fifo[firstIdx].buffer;
+    *pointer = fifo[firstIdx].buffer;
     *length = fifo[firstIdx].length;
     firstIdx = (firstIdx + 1) % fifoSize;
-    return (((fifoSize + lastIdx) - firstIdx) % fifoSize);
+    return ((((fifoSize + lastIdx) - firstIdx) % fifoSize) + 1);
 }
