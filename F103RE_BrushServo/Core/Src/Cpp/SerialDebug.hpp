@@ -31,6 +31,7 @@ public:
 		DEBUG_LEVEL_ERROR
 	};
 private:
+	bool transmitting = false;
 	StaticFIFO* fifo;
 	UART_HandleTypeDef* huartptr;
 	uint8_t uartBuf[64];
