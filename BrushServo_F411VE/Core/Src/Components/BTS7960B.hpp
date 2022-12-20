@@ -12,8 +12,10 @@
 
 class BTS7960B {
 public:
-	BTS7960B(__IO uint32_t* ina_ccr, __IO uint32_t* inb_ccr, GPIO_TypeDef* inha_gpio_port, uint16_t inha_gpio_pin, GPIO_TypeDef* inhb_gpio_port, uint16_t inhb_gpio_pin);
-	void setSpeed(int32_t speed);
+	BTS7960B(TIM_HandleTypeDef* htim, __IO uint32_t* ina_ccr, __IO uint32_t* inb_ccr, GPIO_TypeDef* inha_gpio_port, uint16_t inha_gpio_pin, GPIO_TypeDef* inhb_gpio_port, uint16_t inhb_gpio_pin);
+	void setPower(int32_t power);
+protected:
+	TIM_HandleTypeDef* htim;
 private:
 	__IO uint32_t* ina;
 	__IO uint32_t* inb;
