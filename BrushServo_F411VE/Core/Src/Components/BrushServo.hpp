@@ -31,10 +31,10 @@ private:
 	const float calibrationDegrees = 0;
 	const uint32_t adcMin = 100;
 	const uint32_t adcMax = 3995;
-	const float kp = 100;
-	const float ki = 0;
-	const float kd = 0;
-	const float timerPeriod = 1.0/10000;	//Colocar dependendo do timer
+	const float kp = 50;
+	const float ki = 1;
+	const float kd = 0.5;
+	const float timerPeriod = 1.0/1000;	//Colocar dependendo do timer
 	float error = 0;
 	float ierror = 0;
 	float derror = 0;

@@ -36,9 +36,9 @@ void start(){
 	HAL_TIM_Base_Start_IT(&htim10);
 	debug.debug("Timer init end");
 	while(true){
-		motor.setPositionSpeed(45, 0);
+		motor.setPositionSpeed(-60, 0);
 		HAL_Delay(10000);
-		motor.setPositionSpeed(-45, 0);
+		motor.setPositionSpeed(60, 0);
 		HAL_Delay(10000);
 	}
 }
