@@ -37,9 +37,9 @@ void start(){
 	debug.debug("Timer init end");
 	while(true){
 		motor.setPositionSpeed(45, 0);
-		HAL_Delay(1000);
+		HAL_Delay(10000);
 		motor.setPositionSpeed(-45, 0);
-		HAL_Delay(1000);
+		HAL_Delay(10000);
 	}
 }
 

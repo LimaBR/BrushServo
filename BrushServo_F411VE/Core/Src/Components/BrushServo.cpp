@@ -6,6 +6,9 @@
  */
 
 #include "BrushServo.hpp"
+#include "usbd_cdc_if.h"
+
+char usbBuffer[64];
 
 BrushServo::BrushServo(TIM_HandleTypeDef* htim, __IO uint32_t* ina_ccr, __IO uint32_t* inb_ccr, GPIO_TypeDef* inha_gpio_port, uint16_t inha_gpio_pin, GPIO_TypeDef* inhb_gpio_port, uint16_t inhb_gpio_pin)
 					: BTS7960B(htim, ina_ccr, inb_ccr, inha_gpio_port, inha_gpio_pin, inhb_gpio_port, inhb_gpio_pin) {
@@ -14,6 +17,8 @@ BrushServo::BrushServo(TIM_HandleTypeDef* htim, __IO uint32_t* ina_ccr, __IO uin
 
 void BrushServo::controlCallback(uint32_t adcValue){
 	currentPosition = angleFromAdc(adcValue);
+	sprintf(usbBuffer, "%08lX", adcValue);
+	CDC_Transmit_FS((uint8_t*)usbBuffer, 8);
 	float lastError = error;
 	error = currentPosition - desiredPosition;
 	ierror = ierror + error*timerPeriod;
