@@ -1,0 +1,5 @@
+../Core/Src/Components/INA1X9.cpp:10:1:INA1X9::INA1X9(ADC_STM32*, uint32_t, float, float)	1
+../Core/Src/Components/INA1X9.cpp:14:1:INA1X9::~INA1X9()	1
+../Core/Src/Components/INA1X9.cpp:14:1:virtual INA1X9::~INA1X9()	1
+../Core/Src/Components/INA1X9.cpp:18:9:int32_t INA1X9::init()	1
+../Core/Src/Components/INA1X9.cpp:22:7:float INA1X9::read()	1

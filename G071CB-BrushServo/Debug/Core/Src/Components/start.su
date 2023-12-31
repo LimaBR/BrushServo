@@ -1,0 +1,2 @@
+../Core/Src/Components/start.cpp:15:6:void controlTimer(TIM_HandleTypeDef*)	32	static
+../Core/Src/Components/start.cpp:23:6:void start()	8	static

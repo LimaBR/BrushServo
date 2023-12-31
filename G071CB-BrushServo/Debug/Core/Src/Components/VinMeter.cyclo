@@ -1,0 +1,5 @@
+../Core/Src/Components/VinMeter.cpp:10:1:VinMeter::VinMeter(ADC_STM32*, uint32_t, float, float)	1
+../Core/Src/Components/VinMeter.cpp:14:1:VinMeter::~VinMeter()	1
+../Core/Src/Components/VinMeter.cpp:14:1:virtual VinMeter::~VinMeter()	1
+../Core/Src/Components/VinMeter.cpp:18:9:int32_t VinMeter::init()	1
+../Core/Src/Components/VinMeter.cpp:22:7:float VinMeter::read()	1

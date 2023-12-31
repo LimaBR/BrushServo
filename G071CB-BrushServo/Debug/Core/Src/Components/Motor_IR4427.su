@@ -1,0 +1,6 @@
+../Core/Src/Components/Motor_IR4427.cpp:10:1:Motor_IR4427::Motor_IR4427(PWM_Pin_STM32*, PWM_Pin_STM32*)	24	static
+../Core/Src/Components/Motor_IR4427.cpp:14:1:Motor_IR4427::~Motor_IR4427()	16	static
+../Core/Src/Components/Motor_IR4427.cpp:14:1:virtual Motor_IR4427::~Motor_IR4427()	16	static
+../Core/Src/Components/Motor_IR4427.cpp:18:9:int32_t Motor_IR4427::init()	16	static
+../Core/Src/Components/Motor_IR4427.cpp:24:6:void Motor_IR4427::setEnabled(bool)	16	static
+../Core/Src/Components/Motor_IR4427.cpp:28:6:void Motor_IR4427::setPower(float)	16	static

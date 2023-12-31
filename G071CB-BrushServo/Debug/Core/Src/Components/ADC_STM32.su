@@ -1,0 +1,12 @@
+../Core/Src/Components/ADC_STM32.cpp:14:1:ADC_STM32::ADC_STM32()	16	static
+../Core/Src/Components/ADC_STM32.cpp:18:1:ADC_STM32::~ADC_STM32()	16	static
+../Core/Src/Components/ADC_STM32.cpp:18:1:virtual ADC_STM32::~ADC_STM32()	16	static
+../Core/Src/Components/ADC_STM32.cpp:22:12:static ADC_STM32* ADC_STM32::getInstance()	8	static
+../Core/Src/Components/ADC_STM32.cpp:26:9:int32_t ADC_STM32::init()	16	static
+../Core/Src/Components/ADC_STM32.cpp:31:9:int32_t ADC_STM32::startScan()	16	static
+../Core/Src/Components/ADC_STM32.cpp:35:10:uint16_t ADC_STM32::getData(uint32_t)	16	static
+../Core/Src/Components/ADC_STM32.cpp:40:6:static void ADC_STM32::convCpltCallbackStatic(ADC_HandleTypeDef*)	16	static
+../Core/Src/Components/ADC_STM32.cpp:44:6:void ADC_STM32::convCpltCallback()	16	static
+../Core/Src/Components/ADC_STM32.cpp:46:1:void __static_initialization_and_destruction_0(int, int)	16	static
+../Core/Src/Components/ADC_STM32.cpp:46:1:cpp)	8	static
+../Core/Src/Components/ADC_STM32.cpp:46:1:cpp)	8	static

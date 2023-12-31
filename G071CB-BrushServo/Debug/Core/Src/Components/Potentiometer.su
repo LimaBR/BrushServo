@@ -1,0 +1,5 @@
+../Core/Src/Components/Potentiometer.cpp:10:1:Potentiometer::Potentiometer(ADC_STM32*, uint32_t)	24	static
+../Core/Src/Components/Potentiometer.cpp:14:1:Potentiometer::~Potentiometer()	16	static
+../Core/Src/Components/Potentiometer.cpp:14:1:virtual Potentiometer::~Potentiometer()	16	static
+../Core/Src/Components/Potentiometer.cpp:18:9:int32_t Potentiometer::init()	16	static
+../Core/Src/Components/Potentiometer.cpp:22:7:float Potentiometer::read()	16	static
